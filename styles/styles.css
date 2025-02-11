@@ -1,7 +1,45 @@
-p {
-    color: rgb(102, 73, 230);
-  }
-
-#namepage {
-    font-size: 32px;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
+
+:root {
+  --ff-primary: 'Prompt', sans-serif;
+  --ff-secondary: 'Source Code Pro', monospace;
+  
+  --fw-reg: 300;
+  --fw-bold: 900;
+  
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #d50013;
+
+--grd-dark: rgba(48, 48, 48, 0.90);
+  --grd-accent: rgba(213, 0, 19, 0.90);
+  
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  
+  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+        0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+html {scroll-behavior: smooth;}
+
+body {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+section {
+  padding: 5em 3em;
+}
+
+strong { font-weight: var(--fw-bold);}
