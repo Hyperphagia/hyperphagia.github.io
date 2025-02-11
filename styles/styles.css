@@ -44,34 +44,16 @@ h2,
 h3 {
     line-height: 1;
     margin: 0;
+    font: var(--ff-primary);
+}
+
+h4,
+h5,
+h6,
+p {
+  font: var(--ff-secondary);
 }
 
 h1 { font-size: var(--fs-h1)}
 h2 { font-size: var(--fs-h2)}
 h3 { font-size: var(--fs-h3)}
-
-.section__title {
-    margin-bottom: .25em;
-}
-
-.section__title--intro {
-    font-weight: var(--fw-reg);
-}
-
-.section__subtitle {
-    margin: 0;
-    font-size: var(--fs-h3);
-}
-
-.section__subtitle--intro,
-.section__subtitle--about {
-    padding: .25em 1em;
-    font-family: var(--ff-secondary);
-    margin-bottom: 1em;
-}
-
-.section__subtitle--work {
-    font-weight: var(--fw-bold);
-    font-family: var(--ff-secondary);
-    margin-bottom: 1em;
-}
