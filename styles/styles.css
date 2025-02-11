@@ -58,10 +58,6 @@ h3 { font-size: var(--fs-h3)}
     font-weight: var(--fw-reg);
 }
 
-.section__title--intro strong {
-    display: block;
-}
-
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
@@ -75,7 +71,6 @@ h3 { font-size: var(--fs-h3)}
 }
 
 .section__subtitle--work {
-    color: var(--clr-accent);
     font-weight: var(--fw-bold);
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
