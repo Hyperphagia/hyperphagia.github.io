@@ -1,59 +1,244 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom Properties */
 
 :root {
-  --ff-primary: 'Prompt', sans-serif;
-  --ff-secondary: 'Source Code Pro', monospace;
-  
-  --fw-reg: 300;
-  --fw-bold: 900;
-  
-  --clr-light: #fff;
-  --clr-dark: #303030;
-  --clr-accent: #d50013;
+    --ff-primary: 'Fira Sans', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
 
---grd-dark: rgba(48, 48, 48, 0.90);
-  --grd-accent: rgba(213, 0, 19, 0.90);
-  
-  --fs-h1: 3rem;
-  --fs-h2: 2.25rem;
-  --fs-h3: 1.25rem;
-  --fs-body: 1rem;
-  
-  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
-        0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    --fw-light: 100;
+    --fw-regular: 300;
+    --fw-bold: 600;
+
+    --clr-red: #FF4763;
+    --clr-rose: #AC7B7D;
+    --clr-rose-brown: #CBA5A4;
+    --clr-purple: #140F2D;
+    --clr-green: #DCEDB9;
+    --clr-white: #FFFFFF;
+
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1rem;
 }
 
-html {scroll-behavior: smooth;}
-
-body {
-  background: var(--clr-light);
-  color: var(--clr-dark);
-  margin: 0;
-  font-family: var(--ff-primary);
-  font-size: var(--fs-body);
-  line-height: 1.6;
-}
-
-section {
-  padding: 5em 3em;
-}
-
-strong { font-weight: var(--fw-bold);}
+h1 {font-size: var(--fs-h1);}
+h2 {font-size: var(--fs-h2);}
+h3 {font-size: var(--fs-h3);}
 
 h1,
 h2,
 h3 {
+    color: var(--clr-green);
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+}
+
+strong {
+    font-weight: 700;
+}
+
+section {
+    padding: 5rem;
+}
+
+body {
+    line-height: 1.6;
+    background-color: var(--clr-white);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+section {
+    padding-bottom: 5rem;
+}
+
+#home {
+    padding: .25rem;
+    font-size: 3rem;
+}
+ /* End of custom properties */
+
+ /* This handles the Navigation Menu & other Header related items */
+.nav {
+    padding: 1rem;
+    display: flex;
+}
+
+.nav__list {
+    list-style: none;
+}
+
+.offscreen__menu {
+    background-color: var(--clr-purple);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    transition: .3s ease;
+    z-index: 1;
+}
+
+.offscreen__menu.active {
+    right: 0;
+}
+
+.menu{
+    height: 44px;
+    width: 44px;
+    margin-left: -2rem;
+    position: fixed;
+    z-index: 2;
+}
+
+.menu span {
+    height: 5px;
+    width: 100%;
+    background-color: var(--clr-rose-brown);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.menu span:nth-child(1) {
+    top: 25%;
+}
+
+.menu span:nth-child(3) {
+    top: 75%;
+}
+
+.menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.logo {
+    max-width: 48px;
+    max-height: 48px;
+}
+ /* End of CSS for Navigation & Header */
+
+ /* This Handles the About Me section of the page */
+.section__title__about {
+    color: var(--clr-purple);
+    margin-bottom: -1.5rem;
     line-height: 1;
-    margin: 0;
-    font: var(--ff-primary);
 }
 
-h4,
-h5,
-h6,
-p {
-  font: var(--ff-secondary);
+.about__me__subtitle {
+    background: var(--clr-rose);
+    color: var(--clr-green);
+    padding: .25rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 32px;
+    display: inline-block;
 }
 
-h1 { font-size: var(--fs-h1)}
-h2 { font-size: var(--fs-h2)}
-h3 { font-size: var(--fs-h3)}
+
+@media (min-width: 600px) {
+
+    .about__me {
+        height: 800px;
+        align-items: center;
+        display: grid;
+        margin: 0 auto;
+        width: min-content;
+        grid-column-gap: 0.5rem;
+        grid-template-areas:
+            "img title  "
+            "img subtitle ";
+        grid-template-columns: min-content max-content;
+    }
+
+    .about__me__img {
+        grid-area: img;
+        width: 320px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .about__me__subtitle {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: 1.5rem;
+        width: calc(100% + 1.5rem);
+    }
+}
+ /* End of the About Me section */
+
+ /* This handles the Services section of the page */
+.about__services {
+    display: block;
+    text-align: center;
+    color: var(--clr-green);
+    margin: 0 auto;
+    background-color: var(--clr-red);
+}
+.section__title__services::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    opacity: 0.25;
+}
+
+.services {
+    margin-bottom: 4em;
+}
+
+.service__item {
+    max-width: 500px;
+}
+
+@media (min-width: 900px) {
+    .services {
+        display: flex;
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+    }
+
+    .service__item + .services {
+        margin-left: 2.5em;
+    }
+}
+ /* End of the Services section */

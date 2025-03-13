@@ -3,22 +3,77 @@
 
   <head>
     <link href="styles/styles.css" rel="stylesheet"/>
-    <link href="styles/normalize.css" rel="stylesheet"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Demi Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
 
-  <body>
+ <body>
 
-    <section> <!-- Introduction Area with name and alias-->
-      <h1>
-        Hello! 
-        I am <strong>Jace <i>"Demi"</i>  Harris</strong>
-      </h1>
-      <p>Computer Engineer</p>
-    </section>
+  <header>
+    <div>
+      <a href="index.html">
+        <img src="img/logo.png" alt="logo" class="logo">
+      </a>
+    </div>
 
-  </body>
+    <nav class="nav">
+
+        <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="offscreen__menu">
+            <ul class="nav__list">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#services">What services I provide</a>
+                </li>
+
+                <li>
+                    <a href="#projects">What I've done</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+  <script src="scripts/menuscript.js"></script>
+  </header>
+
+  <section id="home" class="about__me">  <!--This is the introduction, name, image, ect-->
+    <h1 class="section__title__about">Hello,<br> <strong>I am Demi</strong></h1>
+      <img class="about__me__img" src="img/who-am-i.jpg" alt="A picture of Demi">
+      <p class="about__me__subtitle"> Software Engineer</p>
+  </section>
+
+  <section id="services" class="about__services"> <!--What programs and languages do I use? / Who am I?-->
+    <h2 class="section__title__services">
+        What I use
+    </h2>
+    <div class="services">
+        <div class="service__item">
+            <h3>HTML</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique.</p>
+        </div>
+        <div class="service__item">
+            <h3>CSS</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique.</p>
+        </div>
+        <div class="service__item">
+            <h3>JavaScript</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique.</p>
+        </div>
+    </div>
+  </section>
+
+ </body>
 
 </html>
