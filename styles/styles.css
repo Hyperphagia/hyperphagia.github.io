@@ -44,12 +44,13 @@ strong {
 }
 
 section {
-    padding: 5rem;
+    padding-bottom: 5rem;
 }
 
 body {
     line-height: 1.6;
     background-color: var(--clr-white);
+    margin: 0;
 }
 
 html {
@@ -66,9 +67,19 @@ section {
     padding-bottom: 5rem;
 }
 
+li {
+    list-style: none;
+}
+
 #home {
     padding: .25rem;
     font-size: 3rem;
+}
+
+.gap__filler__services-to-projects {
+    height: 8rem;
+    margin-bottom: -4rem;
+    background: linear-gradient(to bottom, var(--clr-red), var(--clr-purple));
 }
  /* End of custom properties */
 
@@ -104,7 +115,7 @@ section {
     right: 0;
 }
 
-.menu{
+.menu {
     height: 44px;
     width: 44px;
     margin-left: -2rem;
@@ -145,6 +156,17 @@ section {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
+
+a.menulink {
+    color: var(--clr-rose);
+}
+
+a.menulink:hover {
+    color: var(--clr-red);
+    transition: .25s;
+    font-size: 2.5rem;
+}
+
 
 .logo {
     max-width: 48px;
@@ -226,6 +248,8 @@ section {
 
 .service__item {
     max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 8px 5px #00000059;
 }
 
 @media (min-width: 900px) {
@@ -242,3 +266,19 @@ section {
     }
 }
  /* End of the Services section */
+
+ /* This handles the My Work section of the page */
+
+.about__projects {
+    margin-top: 2.5rem;
+    background-color: var(--clr-purple);
+}
+
+.section__title__projects {
+    text-align: center;
+    font-size: var(--fs-h1);
+    text-decoration: underline;
+    padding-top: 0;
+}
+
+ /* End of the My Work section */
