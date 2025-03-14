@@ -6,78 +6,50 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Demi Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
 
- <body>
+    <section>
+        <div class="wrapper">
+            <div class="photo-of-me">
+                <div>
+                    <img src="img/who-am-i.jpg" alt="A photo of Demi" class="photo-of-me-photo">
+                </div>
+                <div class="caption-of-me">
+                    <p><i>A photo of me with a sonic cosplayer</i></p>
+                    <div class="caption-of-me-background"></div>
+                </div>
+            </div>
+            <div class="name-intro">
+                <div class="name-and-location">
+                    <p class="intro-name-about">Hello, I'm <strong>Demi!</strong><br><i>Computer Engineer.</i></p>
+                    <p class="intro-name-about intro-name-location"><i>I'm based in Fairfax, VA, USA</i></p>
+                </div>
+                <p class="about-me-degree">I am working on my BS in Computer Engineering<br><br>I am studying at GMU <strong>#Patriots</strong></p>
+            </div>
+            <div class="contact-information-me">
+                <h1 class="section-title-information">Contact Me</h1>
+                <div class="contact-information-links">
+                    <a href="https://github.com/Hyperphagia" class="contact-link">
+                        <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 17 17">
+                            <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" fill="#97E28D"></path>
+                        </svg>
+                    </a>
 
-  <header>
-    <div>
-      <a href="index.html">
-        <img src="img/logo.png" alt="logo" class="logo">
-      </a>
-    </div>
+                    <a href="mailto:jace.harris.256@gmail.com" class="contact-link">
+                        <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M64 112c-8.8.0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1.0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16h384c8.8.0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64h384c35.3.0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3.0-64-28.7-64-64V128z" fill="#97E28D"></path>
+                        </svg>
+                    </a>
 
-    <nav class="nav">
-
-        <div class="menu">
-            <span></span>
-            <span></span>
-            <span></span>
+                    <a href="https://www.linkedin.com/in/jace-harris-753708328/" class="contact-link">
+                        <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 17 17">
+                            <path d="M12.88 0H1.19612C0.557365 0 0 0.459377 0 1.09025V12.8004C0 13.4347 0.557365 14 1.19612 14H12.8765C13.5187 14 14 13.4312 14 12.8004V1.09025C14.0026 0.459377 13.5179 0 12.88 0ZM4.33912 11.6699H2.33362V5.43374H4.33912V11.6699ZM3.4055 4.48611H3.39149C2.74924 4.48611 2.33362 4.00838 2.33362 3.40988C2.33362 2.80088 2.76062 2.3345 3.41687 2.3345C4.07312 2.3345 4.47474 2.79738 4.48874 3.40988C4.48874 4.00838 4.07312 4.48611 3.4055 4.48611ZM11.669 11.6699H9.66349V8.26C9.66349 7.44275 9.37125 6.88536 8.64587 6.88536C8.09112 6.88536 7.76299 7.26075 7.61774 7.62562C7.56349 7.75687 7.54862 7.93536 7.54862 8.11824V11.6699H5.54312V5.43374H7.54862V6.30175C7.84087 5.88612 8.29675 5.28762 9.35725 5.28762C10.6741 5.28762 11.6699 6.15563 11.6699 8.02638L11.669 11.6699Z" fill="#97E28D"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
-
-        <div class="offscreen__menu">
-            <ul class="nav__list">
-
-                <li>
-                    <a href="#home" class="menulink"><i>Home</i></a>
-                </li>
-
-                <li>
-                    <a href="#services" class="menulink"><i>Skills</i></a>
-                </li>
-
-                <li>
-                    <a href="#projects" class="menulink"><i>Projects</i></a>
-                </li>
-
-            </ul>
-        </div>
-
-    </nav>
-  <script src="scripts/scripts.js"></script>
-  </header>
-
-  <section id="home" class="about__me">  <!--This is the introduction, name, image, ect-->
-    <h1 class="section__title__about">Hello,<br> <strong>I am Demi</strong></h1>
-      <img class="about__me__img" src="img/who-am-i.jpg" alt="A picture of Demi">
-      <p class="about__me__subtitle"> Software Engineer</p>
-  </section>
-
-  <section id="services" class="about__services"> <!--What programs and languages do I use? / Who am I?-->
-    <h2 class="section__title__services">
-        What I use
-    </h2>
-    <div class="services">
-        <div class="service__item">
-            <h3>HTML</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique.</p>
-        </div>
-        <div class="service__item">
-            <h3>CSS</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique.</p>
-        </div>
-        <div class="service__item">
-            <h3>JavaScript</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi fugit necessitatibus nisi obcaecati quae recusandae. Alias amet assumenda, consequatur culpa, doloremque dolorum ea itaque, modi mollitia praesentium quibusdam similique.</p>
-        </div>
-    </div>
-  </section>
-  <section class="gap__filler__services-to-projects"></section>
-  <section id="projects" class="about__projects">
-      <h2 class="section__title__projects">My work</h2>
-  </section>
-
- </body>
-
-</html>
+    </section>

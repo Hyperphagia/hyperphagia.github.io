@@ -8,277 +8,149 @@
 
 :root {
     --ff-primary: 'Fira Sans', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+    --ff-secondary: 'Source Code Pro', Roboto Mono, sans-serif;
 
     --fw-light: 100;
     --fw-regular: 300;
     --fw-bold: 600;
 
-    --clr-red: #FF4763;
-    --clr-rose: #AC7B7D;
-    --clr-rose-brown: #CBA5A4;
-    --clr-purple: #140F2D;
-    --clr-green: #DCEDB9;
-    --clr-white: #FFFFFF;
-
     --fs-h1: 4.5rem;
     --fs-h2: 3.75rem;
     --fs-h3: 1.5rem;
     --fs-body: 1rem;
+
+    line-height: 1.5;
 }
 
-h1 {font-size: var(--fs-h1);}
-h2 {font-size: var(--fs-h2);}
-h3 {font-size: var(--fs-h3);}
+html {
+
+}
+
+body {
+    margin: 0;
+    background-color: #0d0c0d;
+}
+
+p {
+    color: #79A9D1;
+    font-family: "Fira sans";
+}
 
 h1,
 h2,
 h3 {
-    color: var(--clr-green);
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 300;
+    color: #7AD96D;
+}
+
+.wrapper {
+    display: flex;
+    margin-top: 1rem;
+    min-width: 1000px;
 }
 
 strong {
-    font-weight: 700;
-}
-
-section {
-    padding-bottom: 5rem;
-}
-
-body {
-    line-height: 1.6;
-    background-color: var(--clr-white);
-    margin: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-}
-
-section {
-    padding-bottom: 5rem;
-}
-
-li {
-    list-style: none;
-}
-
-#home {
-    padding: .25rem;
-    font-size: 3rem;
-}
-
-.gap__filler__services-to-projects {
-    height: 8rem;
-    margin-bottom: -4rem;
-    background: linear-gradient(to bottom, var(--clr-red), var(--clr-purple));
-}
- /* End of custom properties */
-
- /* This handles the Navigation Menu & other Header related items */
-.nav {
-    padding: 1rem;
-    display: flex;
-}
-
-.nav__list {
-    list-style: none;
-}
-
-.offscreen__menu {
-    background-color: var(--clr-purple);
-    height: 100vh;
-    width: 100%;
-    max-width: 450px;
-    position: fixed;
-    top: 0;
-    right: -450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 2rem;
-    transition: .3s ease;
-    z-index: 1;
-}
-
-.offscreen__menu.active {
-    right: 0;
-}
-
-.menu {
-    height: 44px;
-    width: 44px;
-    margin-left: -2rem;
-    position: fixed;
-    z-index: 2;
-}
-
-.menu span {
-    height: 5px;
-    width: 100%;
-    background-color: var(--clr-rose-brown);
-    border-radius: 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: .3s ease;
-}
-
-.menu span:nth-child(1) {
-    top: 25%;
-}
-
-.menu span:nth-child(3) {
-    top: 75%;
-}
-
-.menu.active span:nth-child(1) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.menu.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu.active span:nth-child(3) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-a.menulink {
-    color: var(--clr-rose);
-}
-
-a.menulink:hover {
-    color: var(--clr-red);
-    transition: .25s;
-    font-size: 2.5rem;
-}
-
-
-.logo {
-    max-width: 48px;
-    max-height: 48px;
-}
- /* End of CSS for Navigation & Header */
-
- /* This Handles the About Me section of the page */
-.section__title__about {
-    color: var(--clr-purple);
-    margin-bottom: -1.5rem;
-    line-height: 1;
-}
-
-.about__me__subtitle {
-    background: var(--clr-rose);
-    color: var(--clr-green);
-    padding: .25rem 1rem;
-    margin-bottom: 1rem;
-    font-size: 32px;
-    display: inline-block;
-}
-
-
-@media (min-width: 600px) {
-
-    .about__me {
-        height: 800px;
-        align-items: center;
-        display: grid;
-        margin: 0 auto;
-        width: min-content;
-        grid-column-gap: 0.5rem;
-        grid-template-areas:
-            "img title  "
-            "img subtitle ";
-        grid-template-columns: min-content max-content;
-    }
-
-    .about__me__img {
-        grid-area: img;
-        width: 320px;
-        position: relative;
-        z-index: 2;
-    }
-
-    .about__me__subtitle {
-        align-self: start;
-        grid-column: -1 / 1;
-        grid-row: 2;
-        text-align: right;
-        position: relative;
-        left: 1.5rem;
-        width: calc(100% + 1.5rem);
-    }
-}
- /* End of the About Me section */
-
- /* This handles the Services section of the page */
-.about__services {
-    display: block;
-    text-align: center;
-    color: var(--clr-green);
-    margin: 0 auto;
-    background-color: var(--clr-red);
-}
-.section__title__services::after {
-    content: '';
-    display: block;
-    width: 2em;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    opacity: 0.25;
-}
-
-.services {
-    margin-bottom: 4em;
-}
-
-.service__item {
-    max-width: 500px;
-    background-color: rgba(0, 0, 0, 0.35);
-    box-shadow: 0 0 8px 5px #00000059;
-}
-
-@media (min-width: 900px) {
-    .services {
-        display: flex;
-        max-width: 1600px;
-        margin-left: auto;
-        margin-right: auto;
-        justify-content: space-between;
-    }
-
-    .service__item + .services {
-        margin-left: 2.5em;
-    }
-}
- /* End of the Services section */
-
- /* This handles the My Work section of the page */
-
-.about__projects {
-    margin-top: 2.5rem;
-    background-color: var(--clr-purple);
-}
-
-.section__title__projects {
-    text-align: center;
-    font-size: var(--fs-h1);
+    color: #C0E5C8;
     text-decoration: underline;
-    padding-top: 0;
 }
 
- /* End of the My Work section */
+/* End of Custom Properties */
+
+/* For the First Section Photo */
+
+.photo-of-me {
+    margin: auto 1.5rem auto auto;
+    width: 33%;
+    max-width: 400px;
+    border: 3px solid #151315;
+    border-radius: 2.5rem;
+    border-spacing: 5rem;
+    padding-top: 0.75rem;
+}
+
+.photo-of-me-photo {
+    max-height: 500px;
+    border-radius: 2.5rem;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid #C0E5C8;
+}
+
+.caption-of-me {
+    margin: -1rem auto auto auto;
+    text-align: center;
+    width: 100%;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+}
+
+/* End of the First Section */
+
+/* Second Section Name & Occupation */
+
+.name-intro {
+    width: 33%;
+    max-width: 500px;
+    margin: auto 0 auto 0;
+}
+
+.name-and-location {
+    border: 3px solid #151315;
+    border-radius: 1.5rem;
+    border-spacing: 5rem;
+
+}
+
+.intro-name-about {
+    position: relative;
+    width: 75%;
+    font-size: 3rem;
+    padding: 0.75rem 0 1rem 0.5rem;
+}
+
+.intro-name-about > i {
+    font-size: 1.5rem;
+                     }
+
+.intro-name-location {
+    font-size: 1rem;
+    padding: 0.75rem 0 1rem 1rem;
+}
+
+.about-me-degree {
+    font-size: 1.25rem;
+    text-align: center;
+    border: 3px solid #151315;
+    border-radius: 1.5rem;
+    border-spacing: 5rem;
+}
+
+/* End of the Second Section */
+
+/* Third Section More information & Socials */
+
+.contact-information-me {
+    width: 33%;
+    margin: auto auto auto 0;
+    padding: 1.5rem;
+}
+
+.section-title-information {
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    border: 5px solid #151315;
+    border-radius: 1.5rem;
+    border-spacing: 5rem;
+}
+
+.contact-information-links {
+    border: 5px solid #151315;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    height: 50%;
+    padding: 0.5rem;
+}
+
+/* End of Third Section */
